@@ -8,7 +8,8 @@ try:
     from rich.console import Console
     import keyboard
 except:
-    print("I tried to install this for you but it didn't run, so try running `pip install rich keyboard`")
+    print("I tried to install this for you but it didn't run, so try running:\n`pip install rich`\n`pip install keyboard`\nin your terminal")
+    x = 0/0
 
 terrainList = [0]
 terrainMatrix = [[" ", " ", " ", " ", " ", " ", " ", " ", " ", " "]]
@@ -18,7 +19,6 @@ playerMatrix = [[]]
 xpos = 0
 ypos = 0
 fov = 10
-
 width = 120
 
 console = Console(width=width)
