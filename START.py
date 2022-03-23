@@ -2,23 +2,13 @@ import random
 import os
 from time import sleep
 import copy
+import asyncio
 
 try:
     from rich.console import Console
     import keyboard
-    import asyncio
 except:
-    try:
-        os.system("pip install rich")
-        os.system("pip install keyboard")
-        os.system("pip install asyncio")
-    except:
-        try:
-            os.system("python -m ensurepip -- upgrade")
-        except:
-            os.system("python3 -m ensurepip --upgrade")
-    from rich.console import Console
-    import keyboard
+    print("I tried to install this for you but it didn't run, so try running `pip install rich keyboard`")
 
 terrainList = [0]
 terrainMatrix = [[" ", " ", " ", " ", " ", " ", " ", " ", " ", " "]]
