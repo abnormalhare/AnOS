@@ -158,7 +158,7 @@ def results():
     print("ERROR: INT CANNOT EQUAL STR")
     print("ERROR: ")
     time.sleep(.1)
-    print("1234567890")
+    print("Password: 2083593")
     time.sleep(.2)
     print("ERROR: 'run.py': NETWORK REFUSED: Permssion denied.")
     print("ERROR: 'ver.py': NETWORK REFUSED: Permssion denied.")
@@ -236,15 +236,26 @@ def start_game(played):
 def run_game():
     start_game(0)
     results()
+
+def passwd():
+    print("Type in the password")
+    play = input()
+    if play == "2083593":
+        results()
+    else:
+        run_game()
     
 def opersys():
     print("An OS: Build 0006")
     print("(G)ame")
+    print("(P)assword")
     x=0
     while x == 0:
         if keyboard.is_pressed("g"):
             x = 1
             run_game()
-        
+        elif keyboard.is_pressed("p")
+            x = 1
+            passwd()
     
 opersys()
